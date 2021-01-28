@@ -1,0 +1,30 @@
+<mat-form-field>
+    <mat-chip-list #chipList >
+        <mat-chip *ngFor="let filter of displayList | keyvalue; trackBy:trackBy; index as i"
+                  [removable]="removable"
+                  [selectable]="selectable"
+                  (removed)="onRemove.emit(filter)"
+                  [color]="'accent'"
+                  selected>
+            <span>{{filter.key}} &nbsp;
+                <ng-container *ngIf="!isArray(filter); else multiFilterType">
+                    {{filter.value }}
+                </ng-container>
+
+                <ng-template #multiFilterType>
+                    <span *ngFor="let item of filter.value; index as i">
+                        {{item }}
+                        <span *ngIf="filter.value.length>1 && i+1<filter.value.length">|</span>
+                    </span>
+                </ng-template>
+                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+            </span>
+        </mat-chip>
+        <input disabled
+               hidden
+               [formControl]="filterCtl"
+               [matChipInputFor]="chipList"
+               [matChipInputSeparatorKeyCodes]="separatorKeysCodes">
+    </mat-chip-list>
+</mat-form-field>
+

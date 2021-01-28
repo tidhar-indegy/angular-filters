@@ -1,0 +1,9 @@
+:host {
+    display: grid;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+::ng-deep input {
+    margin-left: 10px
+}

@@ -1,0 +1,9 @@
+<mat-form-field>
+    <label for="start-at-input">Start at:</label>
+    <input #startAt
+           matInput
+           type="date"
+           id="start-at-input"
+           (change)="valueChange(startAt.value)"
+           [(ngModel)]="value"/>
+</mat-form-field>

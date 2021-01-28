@@ -1,0 +1,17 @@
+:host {
+    display: inline-grid;
+    padding: 10px;
+    width: 80vw;
+    border-radius: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 10px;
+    border: 1px solid black;
+}
+
+.filters-container {
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+    grid-column-gap: 50px;
+}

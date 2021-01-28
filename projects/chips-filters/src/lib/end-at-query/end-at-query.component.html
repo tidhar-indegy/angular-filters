@@ -1,0 +1,10 @@
+<mat-form-field>
+    <label for="end-at-input">End at:</label>
+    <input #endAt
+           matInput
+           type="date"
+           id="end-at-input"
+           (change)="valueChange(endAt.value)"
+           [(ngModel)]="value"/>
+</mat-form-field>
+
