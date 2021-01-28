@@ -1,0 +1,15 @@
+<lib-filter-chips-form [filters]="filters"
+                       (onRemove)="remove($event)"
+                       (onAdd)="done($event)"
+></lib-filter-chips-form>
+
+<div class="filters-container">
+    <ng-container #filtersVCR></ng-container>
+    <div (onDone)=done($event)
+         (onValueChange)="done($event)"
+         [freeTextQuery]="filtersContainer"
+         [startAtQuery]="filtersContainer"
+         [endAtQuery]="filtersContainer"
+         class="content">
+    </div>
+</div>

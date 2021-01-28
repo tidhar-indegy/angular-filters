@@ -1,0 +1,8 @@
+<mat-form-field>
+    <label for="free-text-input">Search term:</label>
+    <input matInput type="text"
+           id="free-text-input"
+           [(ngModel)]="value"
+           #freeTextInput
+           (change)="valueChange(freeTextInput.value)">
+</mat-form-field>
