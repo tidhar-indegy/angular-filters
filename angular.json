@@ -3,46 +3,6 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "chips-filters": {
-      "projectType": "library",
-      "root": "projects/chips-filters",
-      "sourceRoot": "projects/chips-filters/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "tsConfig": "projects/chips-filters/tsconfig.lib.json",
-            "project": "projects/chips-filters/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/chips-filters/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/chips-filters/src/test.ts",
-            "tsConfig": "projects/chips-filters/tsconfig.spec.json",
-            "karmaConfig": "projects/chips-filters/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/chips-filters/tsconfig.lib.json",
-              "projects/chips-filters/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
     "demo": {
       "root": "",
       "sourceRoot": "src",
@@ -255,7 +215,47 @@
           }
         }
       }
+    },
+    "chips-filters": {
+      "projectType": "library",
+      "root": "projects/chips-filters",
+      "sourceRoot": "projects/chips-filters/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/chips-filters/tsconfig.lib.json",
+            "project": "projects/chips-filters/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/chips-filters/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/chips-filters/src/test.ts",
+            "tsConfig": "projects/chips-filters/tsconfig.spec.json",
+            "karmaConfig": "projects/chips-filters/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/chips-filters/tsconfig.lib.json",
+              "projects/chips-filters/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
-  "defaultProject": "chips-filters"
+  "defaultProject": "demo"
 }
